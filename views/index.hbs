@@ -1,0 +1,9 @@
+<h1>Favorite Artists!!</h1>
+
+<ul>
+    {{#each artist}}
+    <li><a href="{{this.id}}">{{this.name}} ({{this.age}})</a></li>
+    {{/each}}
+</ul>
+
+<a href="/new">Add a different artist!!</a>
