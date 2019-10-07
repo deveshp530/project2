@@ -24,14 +24,6 @@ router.put('/:id',(req,res) =>{
     }).catch(err => console.error(err))
 })
 
-// router.put('/:id',(req,res) =>{
-//     Artist.findOneAndUpdate({_id: req.params.id},req.body, {new: true})
-//     .then(artist =>{
-//          artist.songs.push(req.params.body)
-//         artist.save()
-//         res.redirect('/')
-//     }).catch(err => console.error(err))
-// })
 
 router.get('/',(req,res)=>{
     Artist.find({}).then(artist =>{
