@@ -16,9 +16,25 @@ router.post('/',(req,res)=>{
     })
 })
 
+router.put('/edit/:id',(req,res) =>{
+    Artist.findOneAndUpdate({_id: req.params.id},req.body)
+    .then(artist =>{
+        artist.songs.push(req.body)
+        artist.save()
+        res.redirect('/')
+    })
+})
+
 router.get('/',(req,res)=>{
     Artist.find({}).then(artist =>{
         res.render('index',{artist})
+    })
+})
+
+router.get('/edit/:id',(req,res) =>{
+    Artist.findOne({_id: req.params.id})
+    .then(artist =>{
+        res.render('edit',artist)
     })
 })
 
