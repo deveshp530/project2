@@ -16,14 +16,22 @@ router.post('/',(req,res)=>{
     })
 })
 
-router.put('/edit/:id',(req,res) =>{
-    Artist.findOneAndUpdate({_id: req.params.id},req.body)
-    .then(artist =>{
-        artist.songs.push(req.body)
-        artist.save()
+router.put('/:id',(req,res) =>{
+    Artist.findOneAndUpdate({_id: req.params.id},{$push:{songs: req.params.body}},{new: true})
+    .then(() =>{
+        console.log(req.body);
         res.redirect('/')
-    })
+    }).catch(err => console.error(err))
 })
+
+// router.put('/:id',(req,res) =>{
+//     Artist.findOneAndUpdate({_id: req.params.id},req.body, {new: true})
+//     .then(artist =>{
+//          artist.songs.push(req.params.body)
+//         artist.save()
+//         res.redirect('/')
+//     }).catch(err => console.error(err))
+// })
 
 router.get('/',(req,res)=>{
     Artist.find({}).then(artist =>{
