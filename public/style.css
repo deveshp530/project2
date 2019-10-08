@@ -1,0 +1,27 @@
+body{
+    background: #55ba45;
+    font-family: 'Gudea', sans-serif;
+
+}
+h1{
+    text-align: center;
+    line-height: 2em;
+    font-size: 40px;
+    color: 280200;
+    margin: 10px;
+}
+
+ul{
+    list-style: none;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a:hover{
+background: white;
+}
+
+a{
+    text-decoration: none;
+    
+}
