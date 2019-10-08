@@ -7,7 +7,7 @@ router.delete('/:id',(req,res)=>{
     .then(()=>{
         // res.json(artist)
         res.redirect('/')
-    })
+    }).catch(err => console.error(err))
 })
 
 router.post('/',(req,res)=>{
@@ -15,7 +15,7 @@ router.post('/',(req,res)=>{
     .then(artist=>{
         // res.json(artist)
         res.redirect('/')
-    })
+    }).catch(err => console.error(err))
 })
 
 router.put('/:id',(req,res) =>{
@@ -32,7 +32,7 @@ router.get('/',(req,res)=>{
     Artist.find({}).then(artist =>{
         // res.json(artist)
         res.render('index',{artist})
-    })
+    }).catch(err => console.error(err))
 })
 
 router.get('/edit/:id',(req,res) =>{
@@ -40,7 +40,7 @@ router.get('/edit/:id',(req,res) =>{
     .then(artist =>{
         // res.json(artist)
         res.render('edit',artist)
-    })
+    }).catch(err => console.error(err))
 })
 
 router.get('/new',(req,res)=>{
@@ -54,7 +54,7 @@ router.get('/:id',(req,res)=>{
         // res.json(artist)
         console.log(artist);
         res.render('show',artist)
-    })
+    }).catch(err => console.error(err))
 })
 
 module.exports = router
