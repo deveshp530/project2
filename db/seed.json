@@ -4,13 +4,13 @@
         "age": 24,
         "location": "Los Angeles",
         "dob": "07-04-1995",
-        "songs": ["Congratulations", "Go Flex", "Candy Paint"]
+        "recentAlbum": "Beerbongs and bentleys"
     },
     {
         "name": "Juice Wrld",
         "age": 20,
         "location": "Los Angeles",
         "dob": "12-02-1998",
-        "songs": ["Armed&Dangerous", "All Girls Are The Same", "Candles"]
+        "recentAlbum": "death race for love"
     }
 ]

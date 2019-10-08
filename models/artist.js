@@ -5,7 +5,7 @@ const ArtistSchema = new mongoose.Schema({
     age: Number,
     location: String,
     dob: String,
-    songs: [String]
+    recentAlbum: String
 })
 
 const Artist = mongoose.model('Artist',ArtistSchema)

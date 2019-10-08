@@ -1,9 +1,10 @@
 <h1>About {{name}}</h1>
- {{songs}}
+
+<p>{{name}} is located in {{location}}. Their recent album was {{recentAlbum}}</p>
 
 
 <form action="/{{id}}?_method=delete" method="post">
     <input type="submit" value="Delete">
 </form>
 
-<a href="/edit/{{id}}">Want to add a song?</a>
+<a href="/edit/{{id}}">Update an album?</a>
