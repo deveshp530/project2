@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === "production") {
   mongoURI = "mongodb://localhost/favArtist";
 }
 
-mongoose.connect('mongodb://localhost/favArtists',{ useNewUrlParser: true,useUnifiedTopology: true,
+mongoose.connect(mongoURI,{ useNewUrlParser: true,useUnifiedTopology: true,
 useFindAndModify: false}, () => {
     console.log("We connected!!!")
   })
